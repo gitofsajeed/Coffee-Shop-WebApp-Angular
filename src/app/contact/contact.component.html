@@ -1,0 +1,97 @@
+<div *ngIf="isvalid" style="width: 50%; margin-left: 25%;" class="text-center" id="liveAlertPlaceholder"><div></div><div></div><div><div class="alert alert-success alert-dismissible" role="alert">   <div>Nice, you triggered this alert message!</div>   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div></div></div>
+<div>
+    <div class="container-fluid mt-5">
+        <div class="row mt-5">
+            <div class="col-md-6 col-xs-8 align-items-center my-5">
+                <h1 style="font-size: 9vh;">Want To Know <br> More? <br> Reach Out To Us!</h1>
+                <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Contact Us
+                </button>
+                
+            </div>
+            <div class="col-md-6 col-xs-8 text-center">
+                <div>
+                    <img src="../assets/Coffee/cafe-pic.jpeg" class="image-fluid" style="width: 370px; border-radius: 10%;" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="caontainer-fluid">
+    <div class="row mt-5 mb-5">
+        
+        <div class="col-md-6 col-xs-8 mt-5">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d245.42733256764916!2d76.38628024975948!3d10.1938631248501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDExJzM4LjIiTiA3NsKwMjMnMTEuOSJF!5e0!3m2!1sen!2sin!4v1698338392450!5m2!1sen!2sin" width="70%" height="100%" style="border:1; margin-left: 50px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col-md-6 col-xs-8 mt-5">
+            <div class="card text-bg-dark" style="width: 100%; height: 100%;">
+                <div class="card-body text-center">
+                  <h3 class="card-title mt-2">Call Us</h3>
+                  <p>+91-XXXXX-XXXXX <br>+91-XXXXX-XXXXX</p>
+                  
+                  <h4 class="card-title">Location</h4>
+                  <h6>121 street road, Angamaly Junction <br>Ernakulam Dist, Kerala <br>Pin code: 680308X</h6>
+
+                  <h4 class="card-title">BUSINESS HOURS</h4>
+                  <P>Monday - Friday <br> Time : 11:00 AM to 11:00 PM <br>Satday - Sunday <br> Time : 11:00 AM to 1:00 AM</P>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+  
+<!-- Contact Form -->
+<div class="modal fade" id="myModal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">contact Form</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="" [formGroup]="addForm" (ngSubmit)="onSubmit()">
+                <div class="form-floating mt-2 mb-3">
+                    <input type="text" class="form-control" formControlName="Name" id="floatingname" placeholder="Name" required>
+                    <label for="floatingname">Name</label>
+                    <div *ngIf="addForm.get('Name')?.hasError('required') && addForm.get('Name')?.touched" class="text-danger">
+                        Name is required.
+                    </div>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" formControlName="email" id="floatingInput" placeholder="name@example.com" required>
+                    <label for="floatingInput">Email address</label>
+                    <div *ngIf="addForm.get('email')?.hasError('required') && addForm.get('email')?.touched" class="text-danger">
+                        Email is required.
+                    </div>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" formControlName="number" id="floatingInput" placeholder="+91 XXXXXXXXXX" required>
+                    <label for="floatingInput">Mobile No.</label>
+                    <div *ngIf="addForm.get('number')?.hasError('required') && addForm.get('number')?.touched" class="text-danger">
+                        Mobile No. is required.
+                    </div>
+                </div>
+
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" formControlName="message" id="floatingTextarea2" style="height: 100px" required></textarea>
+                    <label for="floatingTextarea2">Message</label>
+                    <div *ngIf="addForm.get('message')?.hasError('required') && addForm.get('message')?.touched" class="text-danger">
+                        Type Anything to Us...
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+</div>

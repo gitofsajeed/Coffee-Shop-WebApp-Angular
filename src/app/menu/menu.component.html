@@ -1,0 +1,27 @@
+<div class="col-md-12">
+    <div>
+        <section class="best-selling-items">
+            <div class="container">
+              <div class="category-buttons">
+                <button class="btn btn-outline-primary me-1" (click)="filterProducts('all')">All</button>
+                <button class="btn btn-outline-primary me-1" (click)="filterProducts('drinks')">Drinks</button>
+                <button class="btn btn-outline-primary me-1" (click)="filterProducts('breads')">Breads</button>
+                <button class="btn btn-outline-primary me-1" (click)="filterProducts('desserts')">Desserts</button>
+              </div>
+  
+
+              <div class="row" id="product-cards">
+                <div class="col-md-4 mb-5" *ngFor="let product of filteredProducts">
+                  <div class="card mt-3">
+                    <img [src]="product.img" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ product.itemName }}</h5>
+                      <p class="card-text">&#x20B9; {{ product.price }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+    </div>
+</div>
