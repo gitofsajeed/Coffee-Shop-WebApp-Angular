@@ -1,5 +1,7 @@
 # KappiShop
 
+This Angular-based repository is dedicated to a modern and visually appealing coffee shop website. It seamlessly integrates HTML, CSS, and Bootstrap to deliver an immersive and user-friendly web experience. The repository offers a responsive and mobile-friendly design that caters to customers looking to explore the coffee shop's menu, events, and contact information. It serves as an exemplary showcase of web development using Angular, demonstrating how to create an attractive and functional website for a coffee shop or similar business.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
 
 ## Development server
